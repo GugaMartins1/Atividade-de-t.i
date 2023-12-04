@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciências da Natureza</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #008031;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        h2 {
+            font-size: 40px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 12px;
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+        #popup {
+            display: none;
+            position: fixed;
+            top: 30%;
+            left: 50%;
+            transform: translate(-30%, -30%);
+            padding: 20px;
+            background-color: #008031;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 99;
+        }
+        #popup {
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Ciências Naturais</h1>
+    </header>
+
+    <main>
+        <h2>Trabalhos:</h2>
+        <h4>Escolhi o trabalho que fizemos sobre a série Chernobyl onde nós vimos a série completa e depois fizemos<br> um trabalho sobre e o segundo trabalho escolhido foi sobre o interestelar onde também vimos o filme completo e depois fizemos apresentação sobre os fenômenos que apareciam no filme.</h4>
+        <button onclick="mostrarPopup()">Trabalho de Chernobyl</button>
+
+        <div id="popup">
+            <img src="/Imagens/cher.jpeg">
+            <button onclick="fecharPopup()">Fechar</button>
+        </div>
+    </main>
+
+    <script>
+        function mostrarPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function fecharPopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>

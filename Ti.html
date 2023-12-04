@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>T.i</title>
+
+    <link rel="stylesheet" type="text/css" href="/Estilos/Home.css" media="screen"/>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column ;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .btn-container {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .btn {
+            margin-right: 10px;
+            cursor: pointer;
+            padding: 10px 20px;
+            background-color: #db34bf;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .janela {
+            display: flex;
+        }
+
+        .modal {
+            position: absolute;
+            top: 70%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #db34bf;
+            border-radius: 51px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Informática (Programação)</h1>
+       </header>
+       <h3>A seguir se encontra os trabalhos:</h3>
+    
+    <div class="btn-container">
+        <div class="btn" id="abrirBtn1">Primeiro</div>
+        <div class="btn" id="abrirBtn2">Segundo</div>
+        <div class="btn" id="abrirBtn3">Terceiro</div>
+    </div>
+
+    <div class="janela" id="janela">
+        <div class="modal">
+            <button class="fechar" id="fecharBtn">&times;</button>
+            <h2 id="Titulo"></h2>
+            <p id="Conteudo"></p>
+        </div>
+    </div>
+
+    <script>
+        
+        function abrirModal(id, titulo, conteudo) {
+            document.getElementById('Titulo').innerText = titulo;
+            document.getElementById('Conteudo').innerText = conteudo;
+            document.getElementById('janela').style.display = 'block';
+        }
+
+        
+        function fecharModal() {
+            document.getElementById('janela').style.display = 'none';
+        }
+
+        
+        document.getElementById('abrirBtn1').addEventListener('click', function() {
+            abrirModal('janela', 'Java', 'Gostei muito de trabalhar com java, apesar de difícil e muitas vezes até complicado. Vimos como utilizar diversas funções, isso me deu uma base para lógica importantíssima.');
+        });
+
+        document.getElementById('abrirBtn2').addEventListener('click', function() {
+            abrirModal('janela', 'Python e SQL', 'Grotescamente importante, já que quase todas as vagas de emprego como desenvolvedores são para fazer o backend e banco de dados de empresas, fizemos um banco de dados no sql junto ao python.');
+        });
+
+        document.getElementById('abrirBtn3').addEventListener('click', function() {
+            abrirModal('janela', 'Html e Css', 'Nesse último bimestre utlizamos e muito essas linguagens, para fazer essa atividade inclusive, foi com a qual mais me identifiquei, talvez pela simplicidade da coisa');
+        });
+        document.getElementById('fecharBtn').addEventListener('click', fecharModal);
+    </script>
+
+
+
+</body>
+</html>

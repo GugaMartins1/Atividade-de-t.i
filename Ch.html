@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Ciências Humanas</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #800080;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        h3 {
+            font-size: 30px;
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 12px;
+            font-size: 26px;
+            cursor: pointer;
+        }
+
+        #popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-30%, -30%);
+            padding: 20px;
+            background-color: #800080;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 99;
+        }
+        #popup {
+            font-size: 22px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Ciências Humanas</h1>
+    </header>
+
+    <main>
+        <h3>Trabalhos:</h3>
+        <button onclick="mostrarPopup()">Trabalho 1</button>
+
+        <div id="popup">
+            <p>Humanas eu escolhi o trabalho onde assistimos o filme relatos selvagens e depois tínhamos que anota no papel oque cada relato tinha em comum com certa pessoa, o segundo trabalho foi sobre a simulação da ONU onde meu grupo era a Síria e nós tínhamos que tenta buscar ajuda com os outros países</p>
+            <button onclick="fecharPopup()">Fechar</button>
+        </div>
+    </main>
+
+    <script>
+        function mostrarPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function fecharPopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+
+</body>
+</html>
